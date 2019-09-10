@@ -1,5 +1,3 @@
--- Criando a tabela VIRTUAL
-
 CREATE TABLE virtual(
 cod   NUMBER,
 nome  VARCHAR2(60),
@@ -9,7 +7,7 @@ comissao1 NUMBER(3),
 comissao2 NUMBER(3),
 salario1 AS(ROUND(SALARIO*(1+comissao1/100),2)),
 CONSTRAINT pk_virtual PRIMARY KEY(cod)
-);
+); -- Criando a tabela VIRTUAL
 --ADICIONANDO umas nova coluna ALTER TABLE
 ALTER TABLE VIRTUAL ADD NOMECOMPLETO AS (F_VIR(NOME,SOBRENOME));
 -- ------------------------------------------------------------------
